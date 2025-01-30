@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -11,40 +10,80 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+  <style>
+    body {
+      background-image: url('/static/image/background.jpg'); /* Path to the background image */
+      background-size: contain; /* Minimize the image */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent tiling */
+      background-attachment: fixed; /* Fix the background while scrolling */
+      font-family: 'Arial', sans-serif;
+      height: 100vh; /* Ensure the body takes full height */
+      margin: 0;
+    }
+
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      color: black; /* Change font color to black */
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 500px; /* Restrict the width */
+      position: absolute; /* Absolute positioning */
+      top: 40%; /* Move the box up a bit */
+      left: 0; /* Move box completely to the left */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-floating textarea {
+      height: 80px; /* Reduced height */
+    }
+
+    .btn-primary {
+      background-color: #1f77b4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #155a8a;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white; /* Make the text color white */
+    }
+
+    .navbar {
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+  </style>
+
   <title>SMS Classifier</title>
 </head>
 
 <body>
 
   <!-- Navbar -->
-
-  <div class="container">
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">SMS Classifier</a>
-        <a class="navbar-brand" href="#">Created by Priyanka</a>
-      </div>
-    </nav>
-  </div>
-
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SMS Classifier</a>
+      <a class="navbar-brand" href="#">Created by Priyanka</a>
+    </div>
+  </nav>
 
   <!-- Input form -->
-
-  <div class="container">
-    <h2 class="text-center mt-3">Type a SMS here to check it is Spam or Ham</h2>
+  <div class="content-box">
+    <h2 class="text-center">Type an SMS to check if it is Spam or Ham</h2>
 
     <form action="/" method="POST">
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Write your mail here.." id="email" name="email" style="height: 100px"></textarea>
-        <label for="email">Write your email here...</label>
-        <button class="w-100 btn btn-lg btn-primary">Submit</button>
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Write your SMS here..." id="sms" name="sms"></textarea>
+        <label for="sms">Write your SMS here...</label>
       </div>
-
+      <button type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
     </form>
-
   </div>
-
-
 
 </body>
 
