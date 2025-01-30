@@ -51,6 +51,6 @@ The **SMS Classification Model** is built using the following steps:
 
 ### Step 1: Clone this repository
 ```bash
-git clone https://github.com/your-username/sms-classification 
+git clone https://github.com/Priyanka302002/sms_classifier/tree/main
 
 
